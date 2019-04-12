@@ -1,0 +1,99 @@
+/*Created By Richard Persaud 9911535224*/
+
+
+body{
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+
+}
+
+#main{
+	margin: 5px;
+	text-align: center;
+}
+
+.left_section{
+	width: 45%;
+	background-color: #efefef;
+ float: left;
+  height: 100%;
+  position: fixed;
+}
+
+.right_section{
+	width: 55%;
+float: right;
+background-color: #efeefe;
+transition: 1s;
+}
+
+.area b{
+	transition: 1s;
+	font-size: 1.5em;
+	text-align: center;
+		position: relative;
+		top:-450px;
+}
+
+.Tshirt{
+	width: 100%;
+	position: relative;
+	transition: 1s;
+}
+
+@media screen and (min-width:1000px){
+	.Tshirt{
+		width: 500px;
+		position: relative;
+		transition: 1s;
+	}
+	.area b{
+		transition: 1s;
+		font-size: 2em;
+		text-align: center;
+		position: relative;
+		top: -450px;
+	}
+}
+
+input{
+	padding: 10px;
+	width: 50%;
+	border: none;
+	font-size: 1.5em;
+}
+
+select{
+	padding: 10px;
+	width: 50%;
+}
+
+option{
+	padding: 10px;
+}
+ 
+button{
+	background-color: #5353ff;
+	padding: 10px;
+	color: #fff;
+	margin-top: 20px;
+	border:none;
+	border-radius: 5px;
+}
+
+button:hover{
+	background-color: #3434d4;
+}
+
+.order{
+	transition: 1s;
+	padding-top: 10px;
+	background-image: linear-gradient(#efeefe, #877fff); 
+	margin-top: -130px;
+}
+
+.reset{
+
+	width: 20%;
+}

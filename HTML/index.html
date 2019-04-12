@@ -1,0 +1,132 @@
+<!--Created By Richard Persaud 9911535224-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>T-Shirt</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../CSS/main.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+	<script type="text/javascript">
+
+function textSubmit() {
+	document.getElementById("text").innerHTML = document.myfirm.Tshirt_text.value;
+	document.getElementById("quantity").innerHTML = document.myfirm.quant.value;
+	document.getElementById("size").innerHTML = document.myfirm.size.value;
+
+	document.getElementById("emote").innerHTML = document.myfirm.predef_emo.value;
+}
+
+
+function txtalert(){
+
+		alert('Your order is pending for '+ document.myfirm.quant.value + ' Shirt(s)');
+	 
+	}
+
+	</script>
+</head>
+<body>
+
+	<div Id="main">
+		<div class="left_section">
+
+			<center><h1>(A4)</h1></center>
+
+			<h1>Enter Things You Like:</h1>
+
+
+			<form name="myfirm" onsubmit="return false;">
+				
+				<h4>Enter Text for T-shirt:</h4>
+				<input type="text" maxlength="15" name="Tshirt_text" placeholder="Text for T-shirt" required autofocus="">
+
+
+				<h4>Select your Size:</h4>
+			<select name="size" required>
+				<option value=""></option>
+			    <option value="X-Small">X-Small</option>
+			    <option value="Small">Small</option>
+			    <option value="Medium">Medium</option>
+			    <option value="Large">Large</option>
+			    <option value="X-Large">X-Large</option>
+			</select>
+
+			<h4>Color</h4>
+
+			<button name="clor" onclick="document.getElementById('check').src='../IMG/tshirt_white.png';" style="background-color: white;"></button>
+			<button name="clor" onclick="document.getElementById('check').src='../IMG/tshirt_red.png'" style="background-color: red;"></button>
+			<button name="clor" onclick="document.getElementById('check').src='../IMG/tshirt_blue.png'" style="background-color: blue;"></button>
+			<button name="clor" onclick="document.getElementById('check').src='../IMG/tshirt_green.png'" style="background-color: green;"></button>
+			<button name="clor" onclick="document.getElementById('check').src='../IMG/tshirt_yellow.png'" style="background-color: yellow;"></button>
+			<button name="clor" onclick="document.getElementById('check').src='../IMG/tshirt_purple.png'" style="background-color: purple;"></button>
+			<button name="clor" onclick="document.getElementById('check').src='../IMG/tshirt_orange.png'" style="background-color: orange;"></button>
+
+
+
+
+
+			<h4>Emoji</h4>
+
+			<select name="predef_emo">
+				<option value="&#x1F600">&#x1F600 Smily</option>
+				<option value="&#x1F601">&#x1F601 Grin</option>
+				<option value="&#x1F602">&#x1F602 LOL</option>
+				<option value="&#x1F603">&#x1F603 Excited</option>
+				<option value="&#x1F604">&#x1F604 Happy</option>
+				<option value="&#x1F605">&#x1F605 Imbarrased</option>
+				<option value="&#x1F606">&#x1F606 Laughing</option>
+			</select><br>
+
+
+						<h4>Quantity</h4>
+			  <input type="number"  id="quant" name="a" value="1" min="1">
+				<br>
+				<button onclick="textSubmit()">Create</button>
+
+				<p>Click 'Submit' to place your order.</p>
+
+				<input class="reset" type="reset">
+				<p>Click 'Reset' to reset the input fields</p>
+			</form>
+		</div>
+
+
+		<div class="right_section">
+			<h1>Preview Shirt</h1>
+<p>This is the preview of the shirt your creating</p>
+			<h3>Shirt Color</h3>
+			<div class="area">
+
+		<p>	<img id="check" name="shirt" class="Tshirt" src="../IMG/tshirt_white.png">
+</p>
+				<b id="text" style="font-family: 'Dokdo', cursive; font-size: 2.5em; margin-bottom:-10px; margin-top: 70px;"></b><br>
+
+				<b id="emote" src="" width="150px" style="font-size: 10em;margin-top: -5px"></b>
+			</div>
+
+
+
+					<div class="order">
+					<h1>Your Order</h1>
+					<p>Your order information will be displayed here after submission</p>
+
+						<h2>Shirt Size</h2>
+						<p id="size">.</p>
+
+						<h2>Shirt Quantity</h2>
+						<p id="quantity">.</p> <h5>Shirt(s)</h5>
+
+						<button name="alert" onclick="txtalert()">Place Order</button>
+						
+						<h6>*Created by Richard Persaud*</h6><h6>*Does not work for mobile*</h6>
+						<br><br>
+
+					</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
